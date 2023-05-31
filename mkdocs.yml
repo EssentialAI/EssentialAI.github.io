@@ -46,6 +46,7 @@ theme:
 
 plugins:
   - search
+  - glightbox
 
 repo_url: https://github.com/EssentialAI/essentialai.github.io
 repo_name: EssentialAI
@@ -58,6 +59,8 @@ extra_javascript:
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
+  - attr_list
+  - md_in_html
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - admonition
@@ -67,7 +70,6 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.mark
-  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
