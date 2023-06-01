@@ -3,6 +3,7 @@ nav:
   - Essential AI Home:
       - 'What is Essential AI': index.md
       - 'About Me': about.md
+      - 'Portfolio Optimization using Reinforcement Learning': our_notebook_final.md
   - Computer Vision and Image Processing:
       - 'Introduction': Computer_Vision_and_Image_Processing/index.md
 
