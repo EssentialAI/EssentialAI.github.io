@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# Essential AI
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+<figure markdown="1" style="margin:0 auto; text-align: center;">
+![Image title](images/site-images/logo.JPG){ width="200" }
+</figure>
 
-## Commands
+<p style="text-align: center; margin-top:-10px;"><b>Learn AI, the math way!</b></p>
 
-- `mkdocs new [dir-name]` - Create a new project.
-- `mkdocs serve` - Start the live-reloading docs server.
-- `mkdocs build` - Build the documentation site.
-- `mkdocs -h` - Print help message and exit.
+Welcome to Essential AI, your gateway to unraveling the mysteries of Machine Learning! What began as a repository for capturing crucial concepts in this ever-evolving field has now blossomed into something far greater. At Essential AI, I try and demystify the complexities surrounding Machine Learning and make it accessible to all. I believe that understanding the underlying mathematics is the key to unlocking the true beauty of Machine Learning and Artificial Intelligence.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Essential AI contains: **"{toc here}"**
