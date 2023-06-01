@@ -17,7 +17,7 @@ Before joining UB as an MS CS student, I worked as **Data Scientist-II** at <a h
 
 <div>
 <div style="float:left; margin-top:5px; padding-right: 18px">
-<img src="../images/site-images/primal.png" alt="Longtail boat in Thailand" width="350"><p style="margin: 0; padding:0; text-align:center">| <a href= "#">GitHub</a> | <a href= "#">GitHub</a> | <a href= "#">GitHub</a> |</p>
+<img src="../images/site-images/primal.PNG" alt="Longtail boat in Thailand" width="350"><p style="margin: 0; padding:0; text-align:center">| <a href= "#">GitHub</a> | <a href= "#">GitHub</a> | <a href= "#">GitHub</a> |</p>
 </div>
       
 <p>
