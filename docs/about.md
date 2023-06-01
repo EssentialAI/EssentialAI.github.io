@@ -1,12 +1,12 @@
 # About me
 
-<figure markdown="1">
+<figure markdown="1" style="margin:0 auto; text-align: center;">
 ![Image title](images/site-images/image-modified.png){ width="200" }
 </figure>
 
-<p style="text-align: center;"><b>Naresh Kumar Devulapally</b></p>
+<p style="text-align: center; margin-top:-10px;"><b>Naresh Kumar Devulapally</b></p>
 
-<p style="text-align: center;">| <a href="https://www.linkedin.com/in/nareshdevulapally" target = "_blank">Linkedin</a> | <a href="https://www.linkedin.com/in/nareshdevulapally" target = "_blank">Github</a> | <a href="https://www.linkedin.com/in/nareshdevulapally" target = "_blank">Resume</a> |</p>
+<p style="text-align: center;margin-top:-10px;">| <a href="https://www.linkedin.com/in/nareshdevulapally" target = "_blank">Linkedin</a> | <a href="https://www.linkedin.com/in/nareshdevulapally" target = "_blank">Github</a> | <a href="https://www.linkedin.com/in/nareshdevulapally" target = "_blank">Resume</a> |</p>
 
 I am a Graduate Research and Teaching Assistant at [The State University of New York at Buffalo](https://www.buffalo.edu/). My research is focussed on buildling **Multi-Modal AI models**. My recent work on [Multi-Modal Emotion Recognition across age-groups](#) has been submitted to [ACM Multimedia 2023](https://www.acmmm2023.org/). My previous work named PRIMAL that proposed
 **PRI**vacy-preserving **M**ulti-modal **A**ttentive **L**earning framework for real-time emotion tracking in conversations has received the First Honorable mention at the [Agrusa L. Student Innovation Competition](https://engineering.buffalo.edu/computer-science-engineering/news-and-events/events/russell-l-agrusa-cse-student-innovation-competition.html) at UB. My research at UB is advised by Professor [Sreyasee Das Bhattacharjee](https://cse.buffalo.edu/~sreyasee/) and Professor [Junsong Yuan](https://cse.buffalo.edu/~jsyuan/index.html).
