@@ -48,14 +48,10 @@ theme:
 plugins:
   - search
   - glightbox
+  - plotly
 
 repo_url: https://github.com/EssentialAI/essentialai.github.io
 repo_name: EssentialAI
-
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -74,55 +70,14 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-        #   features:
-        #     # - navigation.tabs
-        #     - navigation.sections
-        #     # - toc.integrate
-        #     # - navigation.top
-        #     - search.suggest
-        #     - search.highlight
-        #     - content.tabs.link
-        #     - content.code.annotation
-        #     - content.code.copy
-        #   language: en
-        #   palette:
-        #     - scheme: default
-        #       toggle:
-        #         icon: material/white-balance-sunny
-        #         name: Switch to dark mode
-        #       # primary: teal
-        #       accent: purple
-        #     - scheme: slate
-        #       toggle:
-        #         icon: material/moon-last-quarter
-        #         name: Switch to light mode
-        #       # primary: teal
-        #       accent: lime
-        # # plugins:
-        # #   - social
-        # # extra:
-        # #   social:
-        # #     - icon: material/moon-last-quarter
-        # #       link: https://github.com/james-willett
-        # #     - icon: material/moon-last-quarter
-        # #       link: https://twitter.com/TheJamesWillett
-        # #     - icon: material/moon-last-quarter
-        # #       link: https://www.linkedin.com/in/willettjames/
-        # markdown_extensions:
-        #   - pymdownx.highlight:
-        #       anchor_linenums: true
-        #   - pymdownx.inlinehilite
-        #   - pymdownx.snippets
-        #   - admonition
-        #   - pymdownx.arithmatex:
-        #       generic: true
-        #   - footnotes
-        #   - pymdownx.details
-        #   - pymdownx.superfences
-        #   - pymdownx.mark
-        #   - attr_list
-        #   - pymdownx.emoji:
-        #       emoji_index: !!python/name:materialx.emoji.twemoji
-        #       emoji_generator: !!python/name:materialx.emoji.to_svg
 
+  - pymdownx.superfences:
+      custom_fences:
+        - name: plotly
+          class: mkdocs-plotly
+          format: !!python/name:mkdocs_plotly_plugin.fences.fence_plotly
 
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
