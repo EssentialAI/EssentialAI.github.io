@@ -22,3 +22,5 @@ y_{i}' \\
 1
 \end{bmatrix}=0\end{split}
 $$
+
+<p style= "text-align:center; margin:0; padding:0;"><iframe src="plot.html" width="700" height="500" frameborder="0"></p>
