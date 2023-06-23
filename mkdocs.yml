@@ -4,8 +4,9 @@ nav:
       - 'Essential AI': index.md
       - 'About Me': about.md
       # - 'Portfolio Optimization using Reinforcement Learning': our_notebook_final.md
-  - Computer Vision and Image Processing:
-      - 'Introduction': Computer_Vision_and_Image_Processing/index.md
+  - Blog:
+      - 'Introduction': blog/index.md
+      - 'Solving Monty Hall': blog/monty-hall.md
 
 theme:
   name: material
@@ -49,6 +50,7 @@ plugins:
   - search
   - glightbox
   - plotly
+  - drawio_file
 
 repo_url: https://github.com/EssentialAI/essentialai.github.io
 repo_name: EssentialAI

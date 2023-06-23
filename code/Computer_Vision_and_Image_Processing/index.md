@@ -1,26 +1,27 @@
 # Computer Vision Introduction
 
-This is introduction to Computer Vision.
+$A$
 
-$$
-    Q_{n+1}(a) = Q_n(a) + \alpha (R_n(\alpha) - Q_n(a))
-$$
+```plotly
+{
+    "data": [
+        {
+            "x": [
+                "giraffes",
+                "orangutans",
+                "monkeys"
+            ],
+            "y": [
+                20,
+                14,
+                23
+            ],
+            "type": "bar"
+        }
+    ]
+}
+```
 
-$$
-\begin{split}\begin{bmatrix}
-x_i \\
-y_i \\
-1
-\end{bmatrix}^T \begin{bmatrix}
-f_{11} & f_{12} & f_{13}  \\
-f_{21} & f_{22} & f_{23}   \\
-f_{31} & f_{32} & f_{33}
-\end{bmatrix}
-\begin{bmatrix}
-x_{i}' \\
-y_{i}' \\
-1
-\end{bmatrix}=0\end{split}
-$$
-
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~Naresh6017/122.embed"></iframe>
+```plotly
+{"file_path": "../Computer_Vision_and_Image_Processing/scatter_girl.json"}
+```
