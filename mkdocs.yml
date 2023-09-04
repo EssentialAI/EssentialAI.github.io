@@ -2,9 +2,16 @@ site_name: Essential AI
 nav:
   - Essential AI Home:
       - 'Essential AI': index.md
+      - 'Website Checklist': checklist.md
       - 'About Me': about.md
-      # - 'Portfolio Optimization using Reinforcement Learning': our_notebook_final.md
-  - Blog:
+
+  - Research Paper Implementations:
+      - 'Under Construction': r_implementations/attention-is-all-you-need.md
+
+  - Research Paper Summaries:
+      - 'Under Construction': r_summary/attention.md
+
+  - Random Articles:
       - 'Introduction': blog/index.md
       - 'Solving Monty Hall': blog/monty-hall.md
 
