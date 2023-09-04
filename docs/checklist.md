@@ -8,7 +8,7 @@ This is the place where I document everything that is planned for this website. 
 
 ⛳️ Bellman Equation Demystified.
 
-⛳️ Object Detection OG paper explained.
+⛳️ Object Detection OG paper explained test.
 
 ----
 ❗️ Current work.
