@@ -8,18 +8,18 @@
 
 <p style="text-align: center;margin-top:-10px;">| <a href="https://www.linkedin.com/in/nareshdevulapally" target = "_blank">Linkedin</a> | <a href="https://www.linkedin.com/in/nareshdevulapally" target = "_blank">Github</a> | <a href="https://www.linkedin.com/in/nareshdevulapally" target = "_blank">Resume</a> |</p>
 
-I am a Graduate Research and Teaching Assistant at [The State University of New York at Buffalo](https://www.buffalo.edu/). My research is focussed on buildling **Multi-Modal AI models**. My recent work on [Multi-Modal Emotion Recognition across age-groups](#) has been submitted to [ACM Multimedia 2023](https://www.acmmm2023.org/). My previous work named PRIMAL that proposed
-**PRI**vacy-preserving **M**ulti-modal **A**ttentive **L**earning framework for real-time emotion tracking in conversations has received the First Honorable mention at the [Agrusa L. Student Innovation Competition](https://engineering.buffalo.edu/computer-science-engineering/news-and-events/events/russell-l-agrusa-cse-student-innovation-competition.html) at UB. My research at UB is advised by Professor [Sreyasee Das Bhattacharjee](https://cse.buffalo.edu/~sreyasee/) and Professor [Junsong Yuan](https://cse.buffalo.edu/~jsyuan/index.html).
-
-Before joining UB as an MS CS student, I worked as **Data Scientist-II** at <a href ="https://www.carbynetech.com/" target = "_blank">Carbynetech India</a> where I led multiple teams to deliver several Computer Vision and Machine Learning projects. My projects increased the revenue of the Data Science team by over **30%** and continue to generate revenue to this date.
-
 ## News
 
 !!! info ""
 
+    **Fall 2023**:
+
+    - M.S. Thesis Candidate co-advised by Prof. [Sreyasee Das Bhattacharjee](https://cse.buffalo.edu/~sreyasee/) and Prof. [Junsong Yuan](https://cse.buffalo.edu/~jsyuan/).
+    - Graduate Teaching Assistant @ (CSE 574) Machine Learning course at UB.
+
     **Summer 2023**:
 
-    - Joined Professor [Kaiyi Ji's](https://cse.buffalo.edu/~kaiyiji/group.html) research team to work on [Federated Learning](https://federated.withgoogle.com/).
+    - **<u>One Paper accepted at ACM Multimedia 2023</u>**.
 
     **Spring 2023**:
 
@@ -42,9 +42,7 @@ Knowledge Distillation.**
 </div>
       
 <p style="margin-top: 0;">
-We present Self-supervised Multi-Label Peer Collaborative Distillation (SeMuL-PCD) Learning via an efficient Multimodal Transformer Network, in which complementary feedback from multiple mode-specific peer networks (e.g.transcript, audio, visual) are distilled into a single mode-ensembled fusion network for estimating multiple emotions simultaneously. The proposed Multimodal Distillation Loss calibrates the fusion network by minimizing the Kullback–Leibler divergence with the peer networks. Additionally, each peer network is conditioned using a self-supervised contrastive objective to improve the generalization across diverse socio-demographic
-speaker backgrounds. We out-perform the current state-of-the-art models on several large-scale
-public datasets (MOSEI, EmoReact and ElderReact) with 17% improvement in weighted F1-score during cross-dataset experimental settings. We demonstrate impressive generalization ability across age and demography-diverse populations.
+We present Self-supervised Multi-Label Peer Collaborative Distillation (SeMuL-PCD) Learning via an efficient Multimodal Transformer Network, in which complementary feedback from multiple mode-specific peer networks (e.g.transcript, audio, visual) are distilled into a single mode-ensembled fusion network for estimating multiple emotions simultaneously. The proposed Multimodal Distillation Loss calibrates the fusion network by minimizing the Kullback–Leibler divergence with the peer networks. Additionally, each peer network is conditioned using a self-supervised contrastive objective to improve the generalization across diverse socio-demographic speaker backgrounds. We out-perform the current state-of-the-art models on several large-scale public datasets (MOSEI, EmoReact and ElderReact) with 17% improvement in weighted F1-score during cross-dataset experimental settings. We demonstrate impressive generalization ability across age and demography-diverse populations.
     </p>
   
   </div>

@@ -5,13 +5,13 @@ nav:
       - 'Website Checklist': checklist.md
       - 'About Me': about.md
 
-  - Research Paper Implementations:
+  - Paper Implementations:
       - 'Under Construction': r_implementations/attention-is-all-you-need.md
 
-  - Research Paper Summaries:
+  - Paper Summaries:
       - 'Under Construction': r_summary/attention.md
 
-  - Random Articles:
+  - Articles:
       - 'Introduction': blog/index.md
       - 'Solving Monty Hall': blog/monty-hall.md
 
