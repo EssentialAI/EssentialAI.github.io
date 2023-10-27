@@ -2,18 +2,20 @@ site_name: Essential AI
 nav:
   - Essential AI Home:
       - 'Essential AI': index.md
-      - 'Website Checklist': checklist.md
       - 'About Me': about.md
+      # - 'Test': test.md
 
-  - Paper Implementations:
-      - 'Under Construction': r_implementations/attention-is-all-you-need.md
+  - AI Papers Explained:
+      - 'Attention Is All You Need': research/attention-is-all-you-need.md
 
-  - Paper Summaries:
-      - 'Under Construction': r_summary/attention.md
+  - Conferences:
+      - 'ACM Multimedia 2023': conferences/mmfp3687-anand.md
 
-  - Articles:
-      - 'Introduction': blog/index.md
-      - 'Solving Monty Hall': blog/monty-hall.md
+plugins:
+  - search
+  - glightbox
+  - plotly
+  - drawio_file
 
 theme:
   name: material
@@ -52,12 +54,6 @@ theme:
   language: en
   icon:
     repo: fontawesome/brands/github
-
-plugins:
-  - search
-  - glightbox
-  - plotly
-  - drawio_file
 
 repo_url: https://github.com/EssentialAI/essentialai.github.io
 repo_name: EssentialAI

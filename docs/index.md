@@ -1,7 +1,7 @@
 # Essential AI
 
 <figure markdown="1" style="margin:0 auto; text-align: center;">
-![Image title](images/site-images/logo.JPG){ width="200" }
+![Image title](assets/images/site-images/logo.JPG){ width="200" }
 </figure>
 
 <p style="text-align: center; margin-top:-10px;"><b>Learn AI, the math way!</b></p>
