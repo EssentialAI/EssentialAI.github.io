@@ -5,10 +5,13 @@ nav:
       - 'About Me': about.md
       # - 'Test': test.md
 
+  - NNs to LLMs:
+      - 'Introduction': nns-to-llms/index.md
+
   - AI Papers Explained:
       - 'Attention Is All You Need': research/attention-is-all-you-need.md
 
-  - Conferences:
+  - Publications:
       - 'ACM Multimedia 2023': conferences/mmfp3687-anand.md
 
 plugins:
