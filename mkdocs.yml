@@ -3,16 +3,20 @@ nav:
   - Essential AI Home:
       - 'Essential AI': index.md
       - 'About Me': about.md
-      # - 'Test': test.md
 
   - NNs to LLMs:
       - 'Introduction': nns-to-llms/index.md
+      - 'Decision Making and Neurons': nns-to-llms/decision-making-and-nns.md
+      - 'Neural Networks': nns-to-llms/neural-networks.md
 
-  - AI Papers Explained:
-      - 'Attention Is All You Need': research/attention-is-all-you-need.md
+  # - AI Papers Explained:
+  #     - 'Attention Is All You Need': research/attention-is-all-you-need.md
 
-  - Publications:
-      - 'ACM Multimedia 2023': conferences/mmfp3687-anand.md
+  # - Publications:
+  #     - 'ACM Multimedia 2023': conferences/mmfp3687-anand.md
+
+  # - Mutimodal AI:
+  #     - 'Introduction': multimodal-ai/index.md
 
 plugins:
   - search
@@ -69,6 +73,9 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - admonition
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.arithmatex:
       generic: true
   - footnotes
