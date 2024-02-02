@@ -60,6 +60,7 @@ theme:
         # accent: purple
   language: en
   icon:
+    annotation: material/plus-circle
     repo: fontawesome/brands/github
 
 repo_url: https://github.com/EssentialAI/essentialai.github.io
@@ -91,6 +92,10 @@ markdown_extensions:
         - name: plotly
           class: mkdocs-plotly
           format: !!python/name:mkdocs_plotly_plugin.fences.fence_plotly
+
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 extra_javascript:
   - javascripts/mathjax.js
