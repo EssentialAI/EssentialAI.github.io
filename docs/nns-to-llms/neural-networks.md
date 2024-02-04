@@ -262,6 +262,169 @@ If you didn't realize, the neural networks are built in this way to facilitate l
 6. Upon training, we will have the optimal values for all the weights $w_i$. 
 7. These weights are then used to predict values for unseen inputs using our trained model.
 
+### The problem and the dataset setup
+
+To train our first Neural Network we are going to use the classic MNIST dataset for digit recognition. Below is a snapshot of some images in the dataset.
+
+<figure markdown>
+![](http://neuralnetworksanddeeplearning.com/images/digits_separate.png){width="500"}
+    <figcaption>MNIST dataset example images.
+    <a href = "http://neuralnetworksanddeeplearning.com/images/digits_separate.png">Source</a>
+    </figcaption>
+</figure>
+
+The plan is to send a bunch of example data points (image information) and labels to the neural network and train the neural network to recognize and distinguish between numbers between 0 to 9.
+
+#### Why not a rule-based approach?
+
+Think about the brute-force way one would solve digit recognition. In our minds we have specific representation of digits and with immense ease we can distinguish between digits very easily. However, that ease is deceptive. Image if we wanted to come up with specific rules to distinguish digits. 
+
+The number of rules required to make such an algorithm would blow up very quickly as there could be numerous ways in which each digit can be written. Take a look at the below image for example.
+
+<figure markdown>
+![](https://miro.medium.com/v2/resize:fit:1200/1*w7pBsjI3t3ZP-4Gdog-JdQ.png){width="500"}
+    <figcaption>Rule based approach does not work as there could be numerous ways to represent every digit differently.
+    <a href = "https://miro.medium.com/v2/resize:fit:1200/1*w7pBsjI3t3ZP-4Gdog-JdQ.png">Source</a>
+    </figcaption>
+</figure>
+
+Hence, we **need** a learning algorithm that could figure out the underlying patterns within all these digits and distinguish between various digits automatically after training. This will be our first **Learning Algorithm** that we will implement from scratch.
+
+### The Plan
+
+``` mermaid
+graph LR
+  A("Gather Data
+   (Digit Images)") --> B[Pre-Process Data to feed
+   into Neural Network] --> C[Devise a 
+   Learning Algorithm]
+   --> D[Initialize the 
+   Neural Network] --> E[Train using the 
+   pre-processed dataset] --> F(Predict on new data points 
+   not present in training dataset);
+```
+
+#### Action Items
+
+- [ ] Gather data containing digit images and labels (MNIST).
+- [ ] Pre-Process the dataset so that Neural Network (NN) can accept the data.
+- [ ] Split the data into train and test. We want to save some data to test the model's performance.
+- [ ] Build a learning algorithm that can be used by **any** NN to train on input data.
+- [ ] Train on the pre-processed train dataset.
+- [ ] Evaluate on the test dataset.
+
+### MNIST dataset
+
+There are numerous ways to get the MNIST dataset as its quite a famous dataset. The original dataset was release by Dr. Yann Lecun et. al., and can be downloaded [here](http://yann.lecun.com/exdb/mnist/index.html). (The link does not open on chromium based browsers, try safari or firefox browsers, but `wget` still works).
+
+MNIST dataset is a collection of 60,000 images of hand-written digits. Each image has a dimension of $28 \times 28$. **How do we process this dataset?** Every value in the image represents a pixel intensity. The way we modeled input layer of the neural network, it should be able accept any input on the number line.
+
+However, how to we process 2-dimensional data? One neat trick is to flatten the $28 \times 28$ into a 1-D vector of size $728$. Then we can feed these $728$ values into the input layer of the neural network. That's exactly what we are going to do.
+
+```py
+import numpy as np
+from urllib import request
+import gzip
+import pickle
+
+filename = [
+["training_images","train-images-idx3-ubyte.gz"],
+["test_images","t10k-images-idx3-ubyte.gz"],
+["training_labels","train-labels-idx1-ubyte.gz"],
+["test_labels","t10k-labels-idx1-ubyte.gz"]
+]
+
+def download_mnist():
+    base_url = "http://yann.lecun.com/exdb/mnist/"
+    for name in filename:
+        print("Downloading "+name[1]+"...")
+        request.urlretrieve(base_url+name[1], name[1])
+    print("Download complete.")
+
+def save_mnist():
+    mnist = {}
+    for name in filename[:2]:
+        with gzip.open(name[1], 'rb') as f:
+            mnist[name[0]] = np.frombuffer(f.read(), np.uint8, offset=16).reshape(-1,28*28)
+    for name in filename[-2:]:
+        with gzip.open(name[1], 'rb') as f:
+            mnist[name[0]] = np.frombuffer(f.read(), np.uint8, offset=8)
+    with open("mnist.pkl", 'wb') as f:
+        pickle.dump(mnist,f)
+    print("Save complete.")
+
+def init():
+    download_mnist()
+    save_mnist()
+
+def load():
+    with open("mnist.pkl",'rb') as f:
+        mnist = pickle.load(f)
+    return mnist["training_images"], mnist["training_labels"], mnist["test_images"], mnist["test_labels"]
+
+init()
+x_train, y_train, x_test, y_test = load()
+```
+We have loaded the data in the form of numpy arrays into `x_train`, `y_train`, `x_test`, `y_test`. All of the train arrays are numpy arrays containing the pixel value of each image as vectors of size $728$.
+
+If we plot the first image of the dataset, we see the following image
+
+```py
+import matplotlib.pyplot as plt
+
+img = x_train[0,:].reshape(28,28) # First image in the training set.
+plt.imshow(img,cmap='gray')
+plt.show() # Show the image
+```
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZAU8v7SOUEd4xGvJxutSB6NcVHCgqdhyH-4v3n3BHsF_D_YvoE_wP9PTs_aE7sbQCKEU&usqp=CAU)
+
+### Modifications to the neural network
+
+Until now, we had a neural network that makes a binary decision. How do we modify the network to make a multi-class classification.
+
+One way is to add as many number of neurons in the output layers as the number of classes present in the datset. This means the final layer for the MNIST digit classification network contains `10` output neurons as there are `10` classes `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`. The number of hidden layers and nodes in each layers is upto us. The input and output layers are the ones that are required to be modified.
+
+<figure markdown>
+![](http://neuralnetworksanddeeplearning.com/images/tikz12.png){width="500"}
+    <figcaption>A possible neural network to classify MNIST digits.
+    <a href = "http://neuralnetworksanddeeplearning.com/images/tikz12.png">Source</a>
+    </figcaption>
+</figure>
+
+In the above network, **we use one neuron per class**. This means based on the neuron that is activated for a given image, we classify the input image. Of course, testing unseen images happens after the training is complete. During training we tune the weights of neurons in a way that representations, patterns and intricacies between images and labels are learnt by the network.
+
+**What if more than one neuron in the output layer is activated for an image?**
+
+In the above network setting, there is a possibility that for a given image, exmaple an image of 5, both 4th and 5th neurons in the output layers, which label do you assign. Softmax is yet another activation function that can be used in this case.
+
+**Softmax Activation** (for the final layer).
+
+Softmax function takes in an array of inputs and gives a probability measure for each input value. Using softmax activation we can take `argmax` of output values and the label with maximum probability is returned. (As I said before, there could many activation functions). (Sigmoid and Softmax are two of the many).
+
+- [x] Gather data containing digit images and labels (MNIST).
+- [x] Pre-Process the dataset so that Neural Network (NN) can accept the data.
+- [x] Split the data into train and test. We want to save some data to test the model's performance.
+- [ ] Build a learning algorithm that can be used by **any** NN to train on input data.
+- [ ] Train on the pre-processed train dataset.
+- [ ] Evaluate on the test dataset.
+
+## Learning with Gradient Descent
+
+Now as we have the dataset and the Neural Network ready, the next step for us to think of a way to make the model learn.
+
+We will use the notation $X$ to denote the training input. Each training input $X_i$ is a $28 \times 28 = 728$ dimensional vector.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
