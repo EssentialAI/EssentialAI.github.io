@@ -8,6 +8,10 @@ nav:
       - 'Introduction': nns-to-llms/index.md
       - 'Decision Making and Neurons': nns-to-llms/decision-making-and-nns.md
       - 'Neural Networks': nns-to-llms/neural-networks.md
+  
+  - Math for ML/DL:
+      - 'Introduction': math-for-ml/index.md 
+      - 'Gradient Descent': math-for-ml/gradient-descent.md 
 
   # - AI Papers Explained:
   #     - 'Attention Is All You Need': research/attention-is-all-you-need.md
